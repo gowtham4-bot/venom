@@ -71,7 +71,7 @@ function App() {
   Search</button>
   <ul>
         {
-          results.map((item, index) => (
+          results?.map((item, index) => (
             <li key={index}>
               <a 
               style={{
