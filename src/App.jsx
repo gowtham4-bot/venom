@@ -6,16 +6,20 @@ function App() {
   const [text, setText] = useState("");
   const [results, setResults] = useState([]);
   return <>
-  
-  <div
+
+<div
   style=
   {{
+    backgroundImage: "url('https://wallpapers.com/images/high/peaceful-sea-as-official-ipad-theme-obb110fl5k4e8e9g.webp')",
+    backgroundSize: "cover",
+    backgroundSize: "100%",
+    backgroundRepeat: "no-repeat",
     display:  "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    height: "100vh",
-    width: "100vw",
+    height: "100%",
+    borderImage: "100%",
   
 
   }}
@@ -61,14 +65,14 @@ function App() {
     style={{
       fontSize: "20px",
       borderRadius: "20px",
-      color: "lightgreen",
+      color: "lightblue",
       cursor: "pointer",
       fontWeight: "bold",
-      width: "100px",
+      width: "40px",
       height: "30px",
   }}
   >
-  Search</button>
+  🔍</button>
   <ul>
         {
           results?.map((item, index) => (
@@ -76,14 +80,13 @@ function App() {
               <a 
               style={{
                 fontSize: "20px",
-                color: "orange",
-                fontFamily: "cursive",
+                color: "black",
                 fontWeight: "bold",
                 textAlign: "left",
                 textDecoration: "none",
               }}
               href={item.url} target="_blank">
-                {item.url}
+                {item.title}
               </a>
               <div
               style={{
@@ -92,7 +95,7 @@ function App() {
                 fontWeight: "bold",
                 textAlign: "center",
                 
-              }}>{item.title}</div>
+              }}></div>
             </li>
           ))
           
@@ -100,7 +103,6 @@ function App() {
       </ul>
   </div>
   </div>
-  
   
   </>;
 }
